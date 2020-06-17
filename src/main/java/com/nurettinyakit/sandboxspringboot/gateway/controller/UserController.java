@@ -1,5 +1,6 @@
 package com.nurettinyakit.sandboxspringboot.gateway.controller;
 
+import com.nurettinyakit.sandboxspringboot.gateway.reqres.dto.User;
 import com.nurettinyakit.sandboxspringboot.usecase.UseCase;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -13,13 +14,13 @@ import static com.nurettinyakit.sandboxspringboot.domain.Constants.CUSTOMER_ID;
 @RestController
 @RequiredArgsConstructor
 @Slf4j
-public class WelcomeController {
+public class UserController {
 
-    private final UseCase<String, String> getWelcome;
+    private final UseCase<String, User> getUsers;
 
-    @GetMapping(value = "welcome")
-    public String welcome(@RequestHeader(CUSTOMER_ID) final String customerId, @RequestParam String name) {
-        log.info("Welcoming Customer {}", customerId);
-        return getWelcome.execute(name);
+    @GetMapping(value = "users")
+    public User welcome(@RequestHeader(CUSTOMER_ID) final String customerId, @RequestParam String id) {
+        log.info("Fetching user {} for the customer {}", id, customerId);
+        return getUsers.execute(id);
     }
 }
