@@ -16,7 +16,6 @@
 ![Twitter Follow](https://img.shields.io/twitter/follow/nurettinyakit?style=social)
 
 
-
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
