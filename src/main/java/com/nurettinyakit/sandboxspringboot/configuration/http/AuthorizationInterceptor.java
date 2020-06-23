@@ -9,7 +9,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
-import static com.nurettinyakit.sandboxspringboot.domain.Constants.CUSTOMER_ID;
+import static com.nurettinyakit.sandboxspringboot.domain.ConstantsUtil.CUSTOMER_ID;
 
 public class AuthorizationInterceptor implements HandlerInterceptor {
 

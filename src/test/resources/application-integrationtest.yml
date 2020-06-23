@@ -1,0 +1,4 @@
+app:
+  gateway:
+    req-res:
+      base-url: "http://localhost:8541"
