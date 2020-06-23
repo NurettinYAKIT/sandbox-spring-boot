@@ -13,21 +13,29 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
+
 ![Twitter Follow](https://img.shields.io/twitter/follow/nurettinyakit?style=social)
 
-
 <!-- TABLE OF CONTENTS -->
+
 ## Table of Contents
 
 * [About the Project](#about-the-project)
+
   * [Built With](#built-with)
+
 * [Getting Started](#getting-started)
+
   * [Prerequisites](#prerequisites)
+
 * [Usage](#usage)
+
 * [Roadmap](#roadmap)
+
 * [Contributing](#contributing)
 
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
 Just a sandbox spring boot project. 
@@ -40,28 +48,29 @@ Just a sandbox spring boot project.
 * Spring boot
 
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
-```mvn clean install```
+``` mvn clean install ```
 
 ### Prerequisites
 
 none.
 
-
 <!-- USAGE EXAMPLES -->
+
 ## Usage
 
-- run application
+* run application
 
 <!-- ROADMAP -->
+
 ## Roadmap
 
 See the [open issues](https://github.com/NurettinYAKIT/sandbox-spring-boot/issues) for a list of proposed features (and known issues).
 
-
-
 <!-- CONTRIBUTING -->
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -78,5 +87,3 @@ Contributions are what make the open source community such an amazing place to b
 [issues-url]: https://github.com/nurettinyakit/sandbox-spring-boot/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/nurettinyakit
-
-<!--[product-screenshot]: images/screenshot.png -->
