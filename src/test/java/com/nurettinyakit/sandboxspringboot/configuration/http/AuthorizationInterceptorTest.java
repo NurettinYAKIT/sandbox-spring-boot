@@ -26,7 +26,7 @@ class AuthorizationInterceptorTest {
     private final AuthorizationInterceptor interceptor = new AuthorizationInterceptor();
 
     @Test
-    public void shouldAllowIfUserAllowedUser() throws IOException {
+    void shouldAllowIfUserAllowedUser() throws IOException {
         when(request.getRequestURI()).thenReturn("localhost");
         when(request.getHeader(USER_ID)).thenReturn("1234");
 
@@ -36,7 +36,7 @@ class AuthorizationInterceptorTest {
     }
 
     @Test
-    public void shouldAllowIfSwagger() throws IOException {
+    void shouldAllowIfSwagger() throws IOException {
         when(request.getRequestURI()).thenReturn("swagger");
 
         assertTrue(interceptor.preHandle(request, response, null));
@@ -44,7 +44,7 @@ class AuthorizationInterceptorTest {
     }
 
     @Test
-    public void shouldRedirectIfUserIdNull() throws IOException {
+    void shouldRedirectIfUserIdNull() throws IOException {
         when(request.getHeader(USER_ID)).thenReturn(null);
         when(request.getRequestURI()).thenReturn("localhost");
 
@@ -55,7 +55,7 @@ class AuthorizationInterceptorTest {
     }
 
     @Test
-    public void shouldRedirectIfUserNotInAllowedUsers() throws IOException {
+    void shouldRedirectIfUserNotInAllowedUsers() throws IOException {
         when(request.getHeader(USER_ID)).thenReturn("xxxx");
         when(request.getRequestURI()).thenReturn("localhost");
 
@@ -64,6 +64,5 @@ class AuthorizationInterceptorTest {
         verify(request, times(2)).getHeader(eq(USER_ID));
         verifyNoMoreInteractions(response, request);
     }
-
 
 }

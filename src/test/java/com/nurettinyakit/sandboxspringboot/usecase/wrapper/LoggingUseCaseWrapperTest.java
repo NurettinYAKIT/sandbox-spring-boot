@@ -42,18 +42,17 @@ class LoggingUseCaseWrapperTest {
     }
 
     @Test
-    public void shouldLogUseCaseAndParam() {
+    void shouldLogUseCaseAndParam() {
         String request = "Request";
 
         wrapper.execute(request);
 
         String consoleOutput = systemOutContent.toString();
-        assertThat(consoleOutput).contains("Executing usecase for String parameters Request");
-        assertThat(consoleOutput).contains("Finished executing usecase for String");
+        assertThat(consoleOutput).contains("Executing usecase for String parameters", "Finished executing usecase for String");
     }
 
     @Test
-    public void shouldLogEvenExceptionOccurs() {
+    void shouldLogEvenExceptionOccurs() {
         String request = "Request";
 
         when(useCase.execute(any())).thenThrow(new RuntimeException("Houston"));

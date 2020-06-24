@@ -102,7 +102,6 @@
                 <version>0.8.5</version>
                 <configuration>
                     <excludes>
-                        <!--                        <exclude>**/configuration/**</exclude>-->
                         <exclude>**/SandboxSpringBootApplication*</exclude>
                     </excludes>
                 </configuration>

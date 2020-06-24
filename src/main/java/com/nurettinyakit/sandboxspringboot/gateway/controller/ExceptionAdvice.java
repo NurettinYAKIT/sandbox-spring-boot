@@ -40,7 +40,7 @@ public class ExceptionAdvice extends ResponseEntityExceptionHandler {
     }
 
     @ExceptionHandler(ValidationException.class)
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ResponseStatus(BAD_REQUEST)
     public Map<String, Object> handleConstraintViolationException(final ValidationException ex,
                                                                   final ServletWebRequest webRequest) {
         log.error("Not valid due to validation error: {}.", ex.getMessage());

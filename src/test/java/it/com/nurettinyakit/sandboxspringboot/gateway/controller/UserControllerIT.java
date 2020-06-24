@@ -91,9 +91,6 @@ class UserControllerIT {
         //GIVEN id
         final String id = "1";
 
-        //AND expected
-        final User expected = createExpectedUser();
-
         //AND stub
         SERVER.stubFor(get("/users/" + id)
                 .willReturn(aResponse()
@@ -125,9 +122,6 @@ class UserControllerIT {
         //GIVEN id
         final String id = "1";
 
-        //AND expected
-        final User expected = createExpectedUser();
-
         //AND stub
         SERVER.stubFor(get("/users/" + id)
                 .willReturn(aResponse()
@@ -158,9 +152,6 @@ class UserControllerIT {
     void shouldReturnNotFoundError() throws IOException {
         //GIVEN id
         final String id = "1";
-
-        //AND expected
-        final User expected = createExpectedUser();
 
         //AND stub
         SERVER.stubFor(get("/users/" + id)
