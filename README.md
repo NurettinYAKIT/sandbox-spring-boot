@@ -7,6 +7,8 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/500983ee853c43ca8f55279af3e7c7c4)](https://app.codacy.com/manual/NurettinYAKIT/sandbox-spring-boot?utm_source=github.com&utm_medium=referral&utm_content=NurettinYAKIT/sandbox-spring-boot&utm_campaign=Badge_Grade_Settings)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=NurettinYAKIT_sandbox-spring-boot&metric=alert_status)](https://sonarcloud.io/dashboard?id=NurettinYAKIT_sandbox-spring-boot)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=NurettinYAKIT_sandbox-spring-boot&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=NurettinYAKIT_sandbox-spring-boot)
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
