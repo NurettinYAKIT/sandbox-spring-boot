@@ -23,7 +23,7 @@ import java.io.IOException;
 import static com.github.tomakehurst.wiremock.client.WireMock.aResponse;
 import static com.github.tomakehurst.wiremock.client.WireMock.get;
 import static com.nurettinyakit.sandboxspringboot.FileUtil.readBodyFromFile;
-import static com.nurettinyakit.sandboxspringboot.domain.ConstantsUtil.CUSTOMER_ID;
+import static com.nurettinyakit.sandboxspringboot.domain.ConstantsUtil.USER_ID;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.fail;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
@@ -93,7 +93,7 @@ class UserControllerIT {
 
     private HttpHeaders createHeaders() {
         final HttpHeaders headers = new HttpHeaders();
-        headers.set(CUSTOMER_ID, "1234");
+        headers.set(USER_ID, "1234");
         return headers;
     }
 }

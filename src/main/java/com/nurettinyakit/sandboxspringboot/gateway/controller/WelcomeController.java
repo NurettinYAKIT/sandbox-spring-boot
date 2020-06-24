@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import static com.nurettinyakit.sandboxspringboot.domain.ConstantsUtil.CUSTOMER_ID;
+import static com.nurettinyakit.sandboxspringboot.domain.ConstantsUtil.USER_ID;
 
 @RestController
 @RequiredArgsConstructor
@@ -18,7 +18,7 @@ public class WelcomeController {
     private final UseCase<String, String> getWelcome;
 
     @GetMapping(value = "welcome")
-    public String welcome(@RequestHeader(CUSTOMER_ID) final String customerId, @RequestParam String name) {
+    public String welcome(@RequestHeader(USER_ID) final String customerId, @RequestParam String name) {
         log.info("Welcoming Customer {}", customerId);
         return getWelcome.execute(name);
     }

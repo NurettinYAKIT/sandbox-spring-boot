@@ -23,6 +23,7 @@
         <sonar.organization>nurettinyakit</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
         <sonar.login>f608950de42066934bca90e4ccbd34ba9bd25cd8</sonar.login>
+        <sonar.exclusions>com.nurettinyakit.sandboxspringboot.SandboxSpringBootApplication</sonar.exclusions>
     </properties>
 
     <dependencies>
@@ -99,6 +100,13 @@
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.8.5</version>
+                <configuration>
+                    <excludes>
+                        <exclude>**/configuration/**</exclude>
+                        <exclude>**/dto/**</exclude>
+                        <exclude>**/SandboxSpringBootApplication*</exclude>
+                    </excludes>
+                </configuration>
                 <executions>
                     <execution>
                         <goals>

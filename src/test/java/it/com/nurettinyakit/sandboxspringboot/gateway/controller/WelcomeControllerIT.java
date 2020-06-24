@@ -11,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.web.client.RestClientException;
 
-import static com.nurettinyakit.sandboxspringboot.domain.ConstantsUtil.CUSTOMER_ID;
+import static com.nurettinyakit.sandboxspringboot.domain.ConstantsUtil.USER_ID;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.fail;
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment.RANDOM_PORT;
@@ -42,7 +42,7 @@ class WelcomeControllerIT {
 
     private HttpHeaders createHeaders() {
         final HttpHeaders headers = new HttpHeaders();
-        headers.set(CUSTOMER_ID, "1234");
+        headers.set(USER_ID, "1234");
         return headers;
     }
 

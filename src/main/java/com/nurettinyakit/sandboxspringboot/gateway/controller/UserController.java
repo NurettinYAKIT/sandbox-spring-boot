@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import static com.nurettinyakit.sandboxspringboot.domain.ConstantsUtil.CUSTOMER_ID;
+import static com.nurettinyakit.sandboxspringboot.domain.ConstantsUtil.USER_ID;
 
 @RestController
 @RequiredArgsConstructor
@@ -19,7 +19,7 @@ public class UserController {
     private final UseCase<String, User> getUsers;
 
     @GetMapping(value = "users")
-    public User welcome(@RequestHeader(CUSTOMER_ID) final String customerId, @RequestParam String id) {
+    public User welcome(@RequestHeader(USER_ID) final String customerId, @RequestParam String id) {
         log.info("Fetching user {} for the customer {}", id, customerId);
         return getUsers.execute(id);
     }
