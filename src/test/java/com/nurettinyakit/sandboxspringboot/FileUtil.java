@@ -14,7 +14,7 @@ import static org.springframework.util.ResourceUtils.CLASSPATH_URL_PREFIX;
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class FileUtil {
 
-    public static String readBodyFromFile(final String fileName) throws IOException {
+    public static String readFileAsString(final String fileName) throws IOException {
         final File file = ResourceUtils.getFile(CLASSPATH_URL_PREFIX + fileName);
         return Files.readString(file.toPath(), StandardCharsets.UTF_8);
     }

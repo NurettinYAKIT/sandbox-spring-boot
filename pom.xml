@@ -15,7 +15,7 @@
     <description>Demo project for Spring Boot</description>
 
     <properties>
-        <java.version>13</java.version>
+        <java.version>14</java.version>
         <springdoc-openapi.version>1.4.1</springdoc-openapi.version>
         <jacoco-version>0.8.5</jacoco-version>
         <wiremock-version>2.26.3</wiremock-version>
