@@ -12,8 +12,8 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
-import static org.assertj.core.api.BDDAssertions.then;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 
@@ -48,8 +48,8 @@ class LoggingUseCaseWrapperTest {
         wrapper.execute(request);
 
         String consoleOutput = systemOutContent.toString();
-        then(consoleOutput).contains("Executing usecase for String parameters Request");
-        then(consoleOutput).contains("Finished executing usecase for String");
+        assertThat(consoleOutput).contains("Executing usecase for String parameters Request");
+        assertThat(consoleOutput).contains("Finished executing usecase for String");
     }
 
     @Test
@@ -61,8 +61,8 @@ class LoggingUseCaseWrapperTest {
         assertThatThrownBy(() -> wrapper.execute(request)).isInstanceOf(RuntimeException.class);
 
         String consoleOutput = systemOutContent.toString();
-        then(consoleOutput).contains("Executing usecase for String parameters Request");
-        then(consoleOutput).contains("Finished executing usecase for String");
+        assertThat(consoleOutput).contains("Executing usecase for String parameters Request");
+        assertThat(consoleOutput).contains("Finished executing usecase for String");
     }
 
 }

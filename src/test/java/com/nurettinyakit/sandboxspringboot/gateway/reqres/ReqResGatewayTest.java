@@ -35,7 +35,7 @@ class ReqResGatewayTest {
     private ReqResGateway gateway;
 
     @BeforeEach
-    void setup() {
+    void setUp() {
         when(properties.getBaseUrl()).thenReturn("https://base.url");
         when(properties.getUsersPath()).thenReturn("/users/{id}");
     }

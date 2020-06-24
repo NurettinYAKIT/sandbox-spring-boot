@@ -2,7 +2,6 @@ package it.com.nurettinyakit.sandboxspringboot.gateway.controller;
 
 import com.github.tomakehurst.wiremock.WireMockServer;
 import com.nurettinyakit.sandboxspringboot.SandboxSpringBootApplication;
-import com.nurettinyakit.sandboxspringboot.configuration.properties.ReqResProperties;
 import com.nurettinyakit.sandboxspringboot.gateway.reqres.dto.Ad;
 import com.nurettinyakit.sandboxspringboot.gateway.reqres.dto.Data;
 import com.nurettinyakit.sandboxspringboot.gateway.reqres.dto.User;
@@ -41,9 +40,6 @@ class UserControllerIT {
 
     @Autowired
     private TestRestTemplate testRestTemplate;
-
-    @Autowired
-    private ReqResProperties reqResProperties;
 
     @BeforeAll
     static void setUpOnce() {

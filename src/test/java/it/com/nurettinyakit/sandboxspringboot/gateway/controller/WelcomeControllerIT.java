@@ -1,6 +1,5 @@
 package it.com.nurettinyakit.sandboxspringboot.gateway.controller;
 
-import com.github.tomakehurst.wiremock.WireMockServer;
 import com.nurettinyakit.sandboxspringboot.SandboxSpringBootApplication;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,8 +21,6 @@ import static org.springframework.http.HttpStatus.OK;
 @SpringBootTest(webEnvironment = RANDOM_PORT, classes = {SandboxSpringBootApplication.class})
 @ActiveProfiles("integrationtest")
 class WelcomeControllerIT {
-
-    private static final WireMockServer SERVER = new WireMockServer(8541);
 
     @Autowired
     private TestRestTemplate testRestTemplate;
