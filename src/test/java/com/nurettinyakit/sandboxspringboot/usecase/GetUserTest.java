@@ -14,12 +14,12 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-class GetUsersTest {
+class GetUserTest {
     @Mock
     private ReqResGateway reqResGateway;
 
     @InjectMocks
-    private GetUsers getUsers;
+    private GetUser getUser;
 
     @Test
     void shouldReturnUsers() {
@@ -30,10 +30,10 @@ class GetUsersTest {
         Ad ad = new Ad("company", "url", "text");
         User expected = new User(data, ad);
         //AND
-        when(reqResGateway.getUsers(id)).thenReturn(expected);
+        when(reqResGateway.getUser(id)).thenReturn(expected);
 
         //WHEN
-        User response = getUsers.execute(id);
+        User response = getUser.execute(id);
 
         //THEN
         assertThat(response).isEqualTo(expected);

@@ -77,7 +77,7 @@ class UserControllerIT {
         final ResponseEntity<User> response;
         try {
             response = testRestTemplate
-                    .exchange("/users?id={id}", GET, new HttpEntity<>(id, createHeaders()), User.class, id);
+                    .exchange("/users/{id}", GET, new HttpEntity<>(id, createHeaders()), User.class, id);
         } catch (final RestClientException ex) {
             fail(ex.getMessage());
             return;
@@ -102,7 +102,7 @@ class UserControllerIT {
         final ResponseEntity<Map<String, Object>> response;
         try {
             response = testRestTemplate
-                    .exchange("/users?id={id}", GET, new HttpEntity<>(id, createHeaders()), new ParameterizedTypeReference<>() {
+                    .exchange("/users/{id}", GET, new HttpEntity<>(id, createHeaders()), new ParameterizedTypeReference<>() {
                     }, id);
         } catch (final RestClientException ex) {
             fail(ex.getMessage());
@@ -133,7 +133,7 @@ class UserControllerIT {
         final ResponseEntity<Map<String, Object>> response;
         try {
             response = testRestTemplate
-                    .exchange("/users?id={id}", GET, new HttpEntity<>(id, createHeaders()), new ParameterizedTypeReference<>() {
+                    .exchange("/users/{id}", GET, new HttpEntity<>(id, createHeaders()), new ParameterizedTypeReference<>() {
                     }, id);
         } catch (final RestClientException ex) {
             fail(ex.getMessage());
@@ -164,7 +164,7 @@ class UserControllerIT {
         final ResponseEntity<Map<String, Object>> response;
         try {
             response = testRestTemplate
-                    .exchange("/users?id={id}", GET, new HttpEntity<>(id, createHeaders()), new ParameterizedTypeReference<>() {
+                    .exchange("/users/{id}", GET, new HttpEntity<>(id, createHeaders()), new ParameterizedTypeReference<>() {
                     }, id);
         } catch (final RestClientException ex) {
             fail(ex.getMessage());
@@ -195,7 +195,7 @@ class UserControllerIT {
         final ResponseEntity<Map<String, Object>> response;
         try {
             response = testRestTemplate
-                    .exchange("/users?id={id}", GET, new HttpEntity<>(id, createHeaders()), new ParameterizedTypeReference<>() {
+                    .exchange("/users/{id}", GET, new HttpEntity<>(id, createHeaders()), new ParameterizedTypeReference<>() {
                     }, id);
         } catch (final RestClientException ex) {
             fail(ex.getMessage());
