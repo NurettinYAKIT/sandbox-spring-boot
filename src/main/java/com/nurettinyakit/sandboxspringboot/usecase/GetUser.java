@@ -7,12 +7,12 @@ import org.springframework.stereotype.Service;
 
 @RequiredArgsConstructor
 @Service
-public class GetUsers implements UseCase<String, User> {
+public class GetUser implements UseCase<String, User> {
 
     private final ReqResGateway gateway;
 
     @Override
     public User execute(final String id) {
-        return gateway.getUsers(id);
+        return gateway.getUser(id);
     }
 }

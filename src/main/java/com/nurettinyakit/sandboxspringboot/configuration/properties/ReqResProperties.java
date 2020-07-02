@@ -18,7 +18,7 @@ public class ReqResProperties {
     private String baseUrl;
 
     @NotBlank
-    @Value("${users:/users/{id}}")
+    @Value("${users:/users}")
     private String usersPath;
 
 }

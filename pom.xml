@@ -16,9 +16,9 @@
 
     <properties>
         <java.version>14</java.version>
-        <springdoc-openapi.version>1.4.1</springdoc-openapi.version>
+        <springdoc-openapi.version>1.4.3</springdoc-openapi.version>
         <jacoco-version>0.8.5</jacoco-version>
-        <wiremock-version>2.26.3</wiremock-version>
+        <wiremock-version>2.27.0</wiremock-version>
         <sonar.projectKey>NurettinYAKIT_sandbox-spring-boot</sonar.projectKey>
         <sonar.organization>nurettinyakit</sonar.organization>
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
@@ -44,11 +44,6 @@
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
@@ -71,6 +66,11 @@
             <version>${wiremock-version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -90,11 +90,11 @@
             <!-- Set the versions for surefire and failsafe to make sure Junit 5 tests are run. -->
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.2</version>
+                <version>3.0.0-M5</version>
             </plugin>
             <plugin>
                 <artifactId>maven-failsafe-plugin</artifactId>
-                <version>2.22.2</version>
+                <version>3.0.0-M5</version>
             </plugin>
             <plugin>
                 <groupId>org.jacoco</groupId>

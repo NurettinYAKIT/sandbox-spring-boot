@@ -55,7 +55,7 @@ class ReqResGatewayTest {
         when(restTemplate.exchange(anyString(), eq(GET), any(), eq(User.class), eq(id)))
                 .thenReturn(ResponseEntity.of(Optional.of(expected)));
 
-        assertThat(gateway.getUsers(id)).isEqualTo(expected);
+        assertThat(gateway.getUser(id)).isEqualTo(expected);
     }
 
     @Test
@@ -65,7 +65,7 @@ class ReqResGatewayTest {
         when(restTemplate.exchange(anyString(), eq(GET), any(), eq(User.class), eq(id)))
                 .thenThrow(new RestClientException("Rest Exception"));
 
-        assertThatThrownBy(() -> gateway.getUsers(id))
+        assertThatThrownBy(() -> gateway.getUser(id))
                 .isInstanceOf(IllegalStateException.class);
     }
 
@@ -76,7 +76,7 @@ class ReqResGatewayTest {
         when(restTemplate.exchange(anyString(), eq(GET), any(), eq(User.class), eq(id)))
                 .thenThrow(new HttpClientErrorException(BAD_REQUEST));
 
-        assertThatThrownBy(() -> gateway.getUsers(id))
+        assertThatThrownBy(() -> gateway.getUser(id))
                 .isInstanceOf(ValidationException.class);
     }
 
@@ -87,7 +87,7 @@ class ReqResGatewayTest {
         when(restTemplate.exchange(anyString(), eq(GET), any(), eq(User.class), eq(id)))
                 .thenThrow(new HttpClientErrorException(UNAUTHORIZED));
 
-        assertThatThrownBy(() -> gateway.getUsers(id))
+        assertThatThrownBy(() -> gateway.getUser(id))
                 .isInstanceOf(ValidationException.class);
     }
 
@@ -98,7 +98,7 @@ class ReqResGatewayTest {
         when(restTemplate.exchange(anyString(), eq(GET), any(), eq(User.class), eq(id)))
                 .thenThrow(new HttpClientErrorException(FORBIDDEN));
 
-        assertThatThrownBy(() -> gateway.getUsers(id))
+        assertThatThrownBy(() -> gateway.getUser(id))
                 .isInstanceOf(IllegalCallerException.class);
     }
 
@@ -109,7 +109,7 @@ class ReqResGatewayTest {
         when(restTemplate.exchange(anyString(), eq(GET), any(), eq(User.class), eq(id)))
                 .thenThrow(new HttpClientErrorException(NOT_FOUND));
 
-        assertThatThrownBy(() -> gateway.getUsers(id))
+        assertThatThrownBy(() -> gateway.getUser(id))
                 .isInstanceOf(UserNotFoundException.class);
     }
 
@@ -120,7 +120,7 @@ class ReqResGatewayTest {
         when(restTemplate.exchange(anyString(), eq(GET), any(), eq(User.class), eq(id)))
                 .thenThrow(new HttpClientErrorException(PAYMENT_REQUIRED));
 
-        assertThatThrownBy(() -> gateway.getUsers(id))
+        assertThatThrownBy(() -> gateway.getUser(id))
                 .isInstanceOf(ValidationException.class);
     }
 
