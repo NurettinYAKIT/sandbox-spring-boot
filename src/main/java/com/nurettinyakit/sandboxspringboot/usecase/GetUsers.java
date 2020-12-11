@@ -13,6 +13,6 @@ public class GetUsers implements UseCase<String, User> {
 
     @Override
     public User execute(final String id) {
-        return gateway.getUsers(id);
+        return gateway.getUser(id);
     }
 }

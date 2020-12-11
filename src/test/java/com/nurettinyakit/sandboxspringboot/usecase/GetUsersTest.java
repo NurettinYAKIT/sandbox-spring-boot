@@ -30,7 +30,7 @@ class GetUsersTest {
         Ad ad = new Ad("company", "url", "text");
         User expected = new User(data, ad);
         //AND
-        when(reqResGateway.getUsers(id)).thenReturn(expected);
+        when(reqResGateway.getUser(id)).thenReturn(expected);
 
         //WHEN
         User response = getUsers.execute(id);
