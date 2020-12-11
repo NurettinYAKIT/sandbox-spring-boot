@@ -5,3 +5,5 @@ app:
   gateway:
     req-res:
       base-url: "https://reqres.in/api"
+    welcome:
+      base-url: "local"
