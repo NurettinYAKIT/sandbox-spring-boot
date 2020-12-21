@@ -49,7 +49,7 @@ class LoggingUseCaseWrapperTest {
         wrapper.execute(request);
 
         String consoleOutput = systemOutContent.toString();
-        assertThat(consoleOutput).contains("Executing usecase for String parameters", "Finished executing usecase for String");
+        assertThat(consoleOutput).contains("Executing use case for String", "Finished executing use case for String");
     }
 
     @Test
@@ -61,8 +61,8 @@ class LoggingUseCaseWrapperTest {
         assertThatThrownBy(() -> wrapper.execute(request)).isInstanceOf(RuntimeException.class);
 
         String consoleOutput = systemOutContent.toString();
-        assertThat(consoleOutput).contains("Executing usecase for String parameters Request");
-        assertThat(consoleOutput).contains("Finished executing usecase for String");
+        assertThat(consoleOutput).contains("Executing use case for String");
+        assertThat(consoleOutput).contains("Finished executing use case for String");
     }
 
 }
