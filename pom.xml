@@ -16,6 +16,10 @@
 
     <properties>
         <java.version>14</java.version>
+
+        <!-- clean architecture starter -->
+        <clean-architecture-starter.version>1.0-SNAPSHOT</clean-architecture-starter.version>
+
         <springdoc-openapi.version>1.4.1</springdoc-openapi.version>
         <jacoco-version>0.8.5</jacoco-version>
         <wiremock-version>2.26.3</wiremock-version>
@@ -27,6 +31,8 @@
     </properties>
 
     <dependencies>
+
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -119,8 +125,15 @@
                     </execution>
                 </executions>
             </plugin>
-
         </plugins>
     </build>
+
+    <repositories>
+        <repository>
+            <id>github</id>
+            <name>Clean Architecture Packages Repository</name>
+            <url>https://maven.pkg.github.com/NurettinYAKIT/clean-architecture-spring-boot-starter</url>
+        </repository>
+    </repositories>
 
 </project>
