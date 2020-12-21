@@ -1,6 +1,7 @@
 package com.nurettinyakit.sandboxspringboot.usecase.wrapper;
 
-import com.nurettinyakit.sandboxspringboot.usecase.UseCase;
+import com.nurettinyakit.cleanarchitecture.usecase.UseCase;
+import com.nurettinyakit.cleanarchitecture.usecase.wrappers.LoggingUseCaseWrapper;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

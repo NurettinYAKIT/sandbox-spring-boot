@@ -1,9 +1,9 @@
 package com.nurettinyakit.sandboxspringboot.gateway.controller;
 
+import com.nurettinyakit.cleanarchitecture.usecase.UseCase;
 import com.nurettinyakit.sandboxspringboot.gateway.reqres.ReqResGateway;
 import com.nurettinyakit.sandboxspringboot.gateway.reqres.dto.User;
 import com.nurettinyakit.sandboxspringboot.gateway.reqres.dto.UsersResponse;
-import com.nurettinyakit.sandboxspringboot.usecase.UseCase;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;

@@ -1,10 +1,13 @@
+cleanarchitecture:
+  applicationName: Sanbox-spring-boot
+
 server:
   port: 8088
 
 app:
   gateway:
     req-res:
-      base-url: "https://reqres.in/api"
+      baseUrl: "https://reqres.in/api"
     welcome:
-      base-url: "app"
+      baseUrl: "app"
       path: "general path"

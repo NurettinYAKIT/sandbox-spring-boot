@@ -1,6 +1,6 @@
 package com.nurettinyakit.sandboxspringboot.gateway.controller;
 
-import com.nurettinyakit.sandboxspringboot.usecase.UseCase;
+import com.nurettinyakit.cleanarchitecture.usecase.UseCase;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;

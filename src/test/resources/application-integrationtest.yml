@@ -1,4 +1,7 @@
+cleanarchitecture:
+  applicationName: sandbox-spring-boot
+
 app:
   gateway:
     req-res:
-      base-url: "http://localhost:8541"
+      baseUrl: "http://localhost:8541"
